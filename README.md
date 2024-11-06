@@ -3,13 +3,13 @@
 Es un sistema encargado de la administración de los útiles de la Universidad Santiago de Cali, permitiendo a los administradores gestionar cada útil de manera rápida y sencilla. Además, genera reportes de incidencias y permite visualizar datos mediante gráficos.
 
 ## Funciones
-*   Inicio de sesion
+*   Inicio de sesión
 *   Registro de usuario
-*   Visualizacion de registros (Edicion, eliminacion y bloqueo)
-*   Creacion de reportes de incidencias
-*   Visualizacion de estadisticas
+*   Visualización de registros (edición, eliminación y bloqueo)
+*   Creación de reportes de incidencias
+*   Visualización de estadísticas
 
-## Ejecucion
+## Ejecución
 
 Para ejecutar el proyecto en tu propio ordenador, sigue los pasos:
 1.  Descarga el repositorio
