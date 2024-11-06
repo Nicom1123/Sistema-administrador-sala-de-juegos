@@ -9,6 +9,14 @@ Es un sistema encargado de la administración de los útiles de la Universidad S
 *   Creación de reportes de incidencias
 *   Visualización de estadísticas
 
+## Roles
+*  JAIR ENRIQUE SANCLEMENTE CASTRO (Product owner)
+*  Briyit Yurany Vallejo Chica (Programadora)
+*  Santiago Trujillo Damina (Diseñador)
+*  Nicolas Moreno Miranda (Team leader)
+*  Fabian Delgado Solarte (Analisis)
+*  Juan Esteban Salazar (Testing)
+
 ## Ejecución
 
 Para ejecutar el proyecto en tu propio ordenador, sigue los pasos:
