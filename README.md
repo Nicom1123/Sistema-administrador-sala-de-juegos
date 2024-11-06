@@ -1,6 +1,6 @@
 # Sistema de informacion admin sala de juegos
 
-Es un sistema encargado de la administracion de los utiles de la universidad santiago de cali, permitiendo a los administradores gestionar cada util de manera rapida y sencilla. ademas de generar reportes de incidencias y visualizar datos mediante graficos.
+Es un sistema encargado de la administración de los útiles de la Universidad Santiago de Cali, permitiendo a los administradores gestionar cada útil de manera rápida y sencilla. Además, genera reportes de incidencias y permite visualizar datos mediante gráficos.
 
 ## Funciones
 *   Inicio de sesion
