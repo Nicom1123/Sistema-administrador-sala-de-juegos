@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.side-bar {
+  background-color: white;
+  width: 13%;
+  height: 100vh;
+  border-right: 2px solid rgba(224, 224, 224, 1);
+}
+
+.side-bar-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.side-bar-top img {
+  width: 64px;
+  height: 64px;
+}
+.side-bar-top p {
+  color: rgba(7, 25, 82, 1);
+  font-weight: 500;
+  letter-spacing: -0, 5em;
+}
+.side-bar ul {
+  margin-top: 20px;
+  list-style-type: none;
+  padding: 0px;
+}
+.side-bar a {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  letter-spacing: -0.05em;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(7, 25, 82, 1);
+  padding: 14px;
+  margin: 16px 18px;
+}
+.side-bar a span {
+  display: flex;
+  margin-right: 7px;
+}
+.side-bar a:hover {
+  background-color: rgba(230, 235, 252, 1);
+  border-radius: 8px;
+  color: rgba(2, 96, 174, 1);
+}
+.side-bar a:hover path {
+  stroke: rgba(2, 96, 174, 1);
+}
+.side-bar a:hover path {
+  fill: rgba(2, 96, 174, 1);
+}
+.side-bar-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin-top: 50px; /* Cambia esto si es necesario */
+}
+
+.side-bar-user a {
+  width: 8em;
+  height: 2em;
+  color: rgba(7, 24, 80, 1);
+  font-size: 10px;
+  padding: 20px;
+  margin: 3px;
+}
+.container {
+  padding: 61px 44px 30px 30px;
+  width: calc(100% - 5%);
+  height: 100vh;
+  box-sizing: border-box;
+}
+.container-info {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+.container-info-page-title h1 {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: rgba(7, 25, 82, 1);
+}
+.container-info-time h1 {
+  letter-spacing: -0.05em;
+  font-size: 2.2em;
+  font-weight: 500;
+  color: rgba(7, 25, 82, 1);
+}
+.container-table {
+  padding: 30px 44px 30px 0px;
+  width: 100%;
+  height: 100%;
+}
+.container-table table {
+  table-layout: auto;
+  width: 100%;
+  border: 1px solid hsl(243, 100%, 93%);
+  border-radius: 8px;
+}
+.container-table table th:not(:last-child) {
+  padding: 25px;
+  text-align: left;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: rgba(7, 25, 82, 1);
+}
+.container-table th:last-child {
+  padding: 25px;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: rgba(7, 25, 82, 1);
+}
+.container-table table span {
+  color: hsl(0, 80%, 35%);
+}
+.container-table table tbody td:not(last-child) {
+  padding: 5px 5px 5px 1.7rem;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 400;
+  color: black;
+  border-top: 1px solid hsl(243, 100%, 93%);
+}
+.container-table table tbody td:last-child {
+  display: flex;
+  justify-content: center;
+}
+.table-buttons {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.table-buttons a span {
+  display: flex;
+  align-items: center;
+}
+.table-buttons a:nth-child(1) {
+  font-family: poppins;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(7, 25, 82, 1);
+  color: white;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+}
+.table-buttons a {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  gap: 6px; 
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+  text-decoration: none;
+  
+}
+.table-buttons a:nth-child(2) {
+  font-family: poppins;
+  padding: 10px 20px;
+  border: 1px solid rgba(2, 96, 174, 1);;
+  border-radius: 8px;
+  background-color: null;
+  color: rgba(2, 96, 174, 1);;
+  font-size: 1em;
+  font-weight: 400;
+  cursor: pointer;
+}
+/* Estilo para el fondo del modal */
+.modal {
+  display: none; /* Eliminamos !important */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+
+/* Estilo para el contenido del modal */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+/* Estilo del botón para crear un nuevo reporte */
+.create-report-button {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-left: auto; /* Empuja el botón a la derecha */
+  margin-right: 10px; /* Espacio entre el título y el botón */
+}
+
+.create-report-button:hover {
+  background-color: #0056b3; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilo del botón "Abrir reporte" en la tabla */
+.report-button {
+  background-color: #001f3f;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.report-button:hover {
+  background-color: #0056b3;
+}
