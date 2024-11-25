@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mulish", sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  width: 30%;
+  padding: 40px;
+  border-radius: 10px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.logo img{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.input-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-text input {
+  width: 300px;
+  height: 30px;
+  padding: 10px;
+  margin: 10px 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.input-text input::placeholder {
+  font-size: 12px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 200;
+}
+.submit {
+  display: flex;
+  justify-content: center;
+}
+.submit button {
+  width: 300px;
+  height: 50px;
+  padding: 10px;
+  margin: 15px 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #003b5e;
+  color: white;
+  font-size: 16px;
+}
