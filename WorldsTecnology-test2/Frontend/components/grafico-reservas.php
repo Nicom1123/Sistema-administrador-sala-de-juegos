@@ -1,5 +1,4 @@
 <?php
-// Asegúrate de que `$graficoData` está disponible antes de incluir este archivo.
 if (!isset($graficoData)) {
     throw new Exception("Los datos del gráfico no están definidos.");
 }

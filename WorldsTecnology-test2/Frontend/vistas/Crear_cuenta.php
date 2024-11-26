@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <div class="logo">
-            <img src="img/logo.png" alt="Logo Sala de Juegos">
+        <img src="Frontend/img/logo.png" alt="Logo Sala de Juegos">
         </div>
         <h2 class="title">Crear Cuenta</h2>
 
@@ -21,6 +21,7 @@
             <div class="input-text">
                 <input type="text" name="identificacion" placeholder="Identificación" required>
                 <input type="password" name="password" placeholder="Contraseña" required>
+                <input type="text" name="code" placeholder="Codigo de seguridad" required>
             </div>
             <div class="submit">
                 <button type="submit">Registrar</button>

@@ -94,6 +94,11 @@
                 }
 
                 if ($stmt->execute()) {
+                    
+                    // Registrar en reservas_historial
+                    $historialStmt = $mysqli->prepare("INSERT INTO reservas_historial (juego) VALUES (?)");
+                    $historialStmt->bind_param("s", $tipo_util);
+                    $historialStmt->execute();
                     header("Location: Consolas.php");
                     exit();
                 } else {

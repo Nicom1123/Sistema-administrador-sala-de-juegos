@@ -24,6 +24,7 @@
         <form action="index.php?action=resetPassword" method="post">
             <div class="input-text">
                 <input type="text" name="identificacion" placeholder="Identificación" required>
+                <input type="text" name="code" placeholder="Codigo de seguridad" required>
                 <input type="password" name="password" placeholder="Nueva Contraseña" required>
             </div>
             <div class="submit">

@@ -3,7 +3,8 @@ use usc;
 CREATE TABLE admin (
     id       INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(255) NOT NULL,
-    password VARCHAR(255) NOT NULL
+    password VARCHAR(255) NOT NULL,
+    code VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE consolas (
@@ -57,3 +58,53 @@ ALTER TABLE billar ADD COLUMN estado VARCHAR(20) DEFAULT 'activo';
 ALTER TABLE aerohockey ADD COLUMN estado VARCHAR(20) DEFAULT 'activo';
 ALTER TABLE consolas ADD COLUMN estado VARCHAR(20) DEFAULT 'activo';
 
+
+-- Insertar para la tabla consolas
+INSERT INTO consolas (estudiante, juego, hora_finalizacion, estado) 
+VALUES
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo'),
+('', '', '00:00:00', 'activo');
+
+-- Insertar 6 registros para la tabla PingPong
+INSERT INTO PingPong (estudiante, hora_finalizacion, estado)
+VALUES
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo');
+
+-- Insertar 3 registros para la tabla billar
+INSERT INTO billar (estudiante, hora_finalizacion, estado)
+VALUES
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo');
+
+-- Insertar 3 registros para la tabla futbolito
+INSERT INTO futbolito (estudiante, hora_finalizacion, estado)
+VALUES
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo');
+
+-- Insertar 2 registros para la tabla aerohockey
+INSERT INTO aerohockey (estudiante, hora_finalizacion, estado)
+VALUES
+('', '00:00:00', 'activo'),
+('', '00:00:00', 'activo');

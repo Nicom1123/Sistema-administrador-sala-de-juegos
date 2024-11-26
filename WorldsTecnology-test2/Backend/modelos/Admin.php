@@ -16,22 +16,58 @@ class Admin {
         return $result->num_rows === 1;
     }
 
-    public function createAccount($username, $password) {
-        $sql = "INSERT INTO admin (username, password) VALUES (?, ?)";
+    public function createAccount($username, $password, $code) {
+        // Verificar si el username ya existe
+        $checkSql = "SELECT COUNT(*) AS count FROM admin WHERE username = ?";
+        $checkStmt = $this->mysqli->prepare($checkSql);
+        $checkStmt->bind_param("s", $username);
+        $checkStmt->execute();
+        $result = $checkStmt->get_result();
+        $row = $result->fetch_assoc();
+    
+        if ($row['count'] > 0) {
+            // Si el username ya existe, retornar false
+            return false;
+        }
+    
+        // Hashear la contraseña para mayor seguridad
+        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+    
+        // Insertar la nueva cuenta
+        $sql = "INSERT INTO admin (username, password, code) VALUES (?, ?, ?)";
         $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("ss", $username, $password);
+        $stmt->bind_param("sss", $username, $hashedPassword, $code);
         return $stmt->execute();
     }
-
-    public function resetPassword($username, $password) {
+    
+    
+    public function resetPassword($username, $password, $code) {
+        // Verificar si la cuenta existe
         if ($this->exists($username)) {
-            $sql = "UPDATE admin SET password = ? WHERE username = ?";
+            // Verificar si el código de seguridad coincide
+            $sql = "SELECT code FROM admin WHERE username = ?";
             $stmt = $this->mysqli->prepare($sql);
-            $stmt->bind_param("ss", $password, $username);
-            return $stmt->execute();
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $result = $stmt->get_result();
+            $row = $result->fetch_assoc();
+    
+            if ($row && $row['code'] === $code) {
+                // Actualizar la contraseña
+                $passwordHash = password_hash($password, PASSWORD_DEFAULT); // Usar hash para mayor seguridad
+                $updateSql = "UPDATE admin SET password = ? WHERE username = ?";
+                $updateStmt = $this->mysqli->prepare($updateSql);
+                $updateStmt->bind_param("ss", $passwordHash, $username);
+                return $updateStmt->execute();
+            } else {
+                // Código de seguridad incorrecto
+                return false;
+            }
         }
+        // Cuenta no encontrada
         return false;
     }
+    
 
     public function exists($username) {
         $sql = "SELECT * FROM admin WHERE username = ?";
