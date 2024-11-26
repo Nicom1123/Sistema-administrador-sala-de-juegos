@@ -2,7 +2,7 @@
 
 $servername = "localhost";
 $username = "root";
-$password = "root"; // Prueba con una cadena vacía
+$password = "root"; // Ingresa tu contraseña de MySQL
 $dbname = "usc";
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);

@@ -22,6 +22,7 @@ Es un sistema encargado de la administración de los útiles de la Universidad S
 Para ejecutar el proyecto en tu propio ordenador, sigue los pasos:
 1.  Descarga el repositorio
 2.  Extrae la carpeta en el siguiente directorio (Si usas XAMPP): C:\xampp\htdocs
-3.  En MySQL Workbench, ejecuta los comandos del archivo config/Tables.sql
-4.  Ejecuta XAMPP y abre en tu navegador la carpeta usando localhost/{Nombre de la carpeta extraida}
-5.  Crea tu cuenta en la seccion "Crear cuenta" en el login
+3.  En MySQL Workbench o PHPmyAdmin, ejecuta los comandos del archivo config/Tables.sql
+4.  En Backend/config/conex.php. Cambia el contenido de la variable "$password" A tu contraseña de base de datos.
+5.  Ejecuta XAMPP y abre en tu navegador la carpeta usando localhost/{Nombre de la carpeta extraida}
+6.  Crea tu cuenta en la seccion "Crear cuenta" en el login
