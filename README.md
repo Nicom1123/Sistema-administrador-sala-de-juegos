@@ -24,3 +24,4 @@ Para ejecutar el proyecto en tu propio ordenador, sigue los pasos:
 2.  Extrae la carpeta en el siguiente directorio (Si usas XAMPP): C:\xampp\htdocs
 3.  En MySQL Workbench, ejecuta los comandos del archivo config/Tables.sql
 4.  Ejecuta XAMPP y abre en tu navegador la carpeta usando localhost/{Nombre de la carpeta extraida}
+5.  Crea tu cuenta en la seccion "Crear cuenta" en el login
