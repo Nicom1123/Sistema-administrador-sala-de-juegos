@@ -30,13 +30,12 @@ class Admin {
             return false;
         }
     
-        // Hashear la contraseña para mayor seguridad
-        $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
     
         // Insertar la nueva cuenta
         $sql = "INSERT INTO admin (username, password, code) VALUES (?, ?, ?)";
         $stmt = $this->mysqli->prepare($sql);
-        $stmt->bind_param("sss", $username, $hashedPassword, $code);
+        $stmt->bind_param("sss", $username, $password, $code);
         return $stmt->execute();
     }
     
@@ -54,10 +53,9 @@ class Admin {
     
             if ($row && $row['code'] === $code) {
                 // Actualizar la contraseña
-                $passwordHash = password_hash($password, PASSWORD_DEFAULT); // Usar hash para mayor seguridad
                 $updateSql = "UPDATE admin SET password = ? WHERE username = ?";
                 $updateStmt = $this->mysqli->prepare($updateSql);
-                $updateStmt->bind_param("ss", $passwordHash, $username);
+                $updateStmt->bind_param("ss", $password, $username);
                 return $updateStmt->execute();
             } else {
                 // Código de seguridad incorrecto
