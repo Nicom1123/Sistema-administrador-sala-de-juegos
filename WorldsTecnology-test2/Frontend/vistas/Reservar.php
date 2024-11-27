@@ -51,7 +51,7 @@
             <?php endif; ?>
 
             <?php if (!empty($registrosDisponibles)): ?>
-                <label for="registro_id">Selecciona un registro disponible:</label>
+                <label for="registro_id">Selecciona un juego disponible:</label>
                 <select name="registro_id" id="registro_id" required>
                     <option value="">Seleccione</option>
                     <?php foreach ($registrosDisponibles as $id): ?>
